@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Porfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="index.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "FT2c1NliDEfZ9zFOX",
+      });
+   })();
+</script>
 </head>
 <body>
 <div id="header">
     <div class ="container">
         <nav>
             <img src="images/logo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li> 
-                <li><a href="#">About</a></li> 
-                <li><a href="#">Services</a></li> 
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>  
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li> 
+                <li><a href="#about">About</a></li> 
+                <li><a href="#services">Services</a></li> 
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>  
+                <img src="images/times-svgrepo-com.svg" onclick="closemenu()">
             </ul>
+            <img src="images/menu-svgrepo-com.svg" onclick="openmenu()">
          </nav>
          <div class="header-text">
             <p>Full Stack Developer</p>
@@ -72,11 +88,86 @@
 <div id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            
+        <div class="services-list"> 
+            <div>
+                <img src="images/code-slash-svgrepo-com.svg">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <img src="images/crop-svgrepo-com.svg">
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <img src="images/app-store-svgrepo-com.svg">
+                <h2>App Design</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+                    <a href="#">Learn more</a>
+            </div>
         </div>
     </div>
 </div>
+<!---------------portfolio------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App </h3>
+                    <p>The app connects you to the talented people around the world.
+                        Download it from play store.</p>
+                        <a href="#"><img src="images/link-external-new-window-open-svgrepo-com.svg"></a>
+                       
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!------------------contact----------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><img src="images/send-svgrepo-com.svg">contact@example.com</p>
+                <p><img src="images/phone-svgrepo-com.svg">+91 9096271682</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/"><img src="images/linkedin-svgrepo-com.svg">
+                    <a href="https://instagram.com/"><img src="images/instagram-svgrepo-com.svg">
+                    <a href="https://twitter.com/"><img src="images/twitter-svgrepo-com.svg">
+                    <a href="https://facebook.com/"><img src="images/facebook-svgrepo-com.svg">
+                </div>
+                <a href="" download class="btn btn2">Download CV</a>
+            </div> 
+            <div class="contact-right">
+                <form>
+                    <input type="text" id="name1" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email1" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id="message1" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2" onclick="sendMail()">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Shweta Hundekari <img src="images/heart-svgrepo-com.svg"></p>
+    </div>
+</div>
+
+
 
 <script>
 
@@ -93,6 +184,17 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab")
 
+    }
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right="0";
+    }
+    function closemenu(){
+        sidemeu.style.right="-200px";
     }
 </script>
 </body>
