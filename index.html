@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Porfolio</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="index.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script src="index.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "FT2c1NliDEfZ9zFOX",
-      });
-   })();
-</script>
+    </script>
+
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "FT2c1NliDEfZ9zFOX",
+        });
+    })();
+    </script>
+
 </head>
 <body>
 <div id="header">
@@ -46,7 +46,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.png">
+                <img src="images/userimage.jpg">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -121,15 +121,26 @@
                     <h3>Social Media App </h3>
                     <p>The app connects you to the talented people around the world.
                         Download it from play store.</p>
-                        <a href="#"><img src="images/link-external-new-window-open-svgrepo-com.svg"></a>
-                       
+                        <a href="#"><img src="images/link-external-new-window-open-svgrepo-com.svg" style="margin-top: 10%;"></a>   
                 </div>
             </div>
             <div class="work">
                 <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Social Media App </h3>
+                    <p>The app connects you to the talented people around the world.
+                        Download it from play store.</p>
+                        <a href="#"><img src="images/link-external-new-window-open-svgrepo-com.svg" style="margin-top: 10%;"></a>   
+                </div>
             </div>
             <div class="work">
                 <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Social Media App </h3>
+                    <p>The app connects you to the talented people around the world.
+                        Download it from play store.</p>
+                        <a href="#"><img src="images/link-external-new-window-open-svgrepo-com.svg" style="margin-top: 10%;"></a>   
+                </div>
             </div>
         </div>
         <a href="#" class="btn">See more</a>
@@ -149,13 +160,13 @@
                     <a href="https://twitter.com/"><img src="images/twitter-svgrepo-com.svg">
                     <a href="https://facebook.com/"><img src="images/facebook-svgrepo-com.svg">
                 </div>
-                <a href="" download class="btn btn2">Download CV</a>
+                <a href="#" download class="btn btn2">Download CV</a>
             </div> 
             <div class="contact-right">
-                <form>
-                    <input type="text" id="name1" name="Name" placeholder="Your Name" required>
-                    <input type="email" id="email1" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" id="message1" rows="6" placeholder="Your Message"></textarea>
+                <form method="post">
+                    <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id="message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2" onclick="sendMail()">Submit</button>
                 </form>
                 <span id="msg"></span>
@@ -196,6 +207,8 @@
     function closemenu(){
         sidemeu.style.right="-200px";
     }
+    
+
 </script>
 </body>
 </html>
